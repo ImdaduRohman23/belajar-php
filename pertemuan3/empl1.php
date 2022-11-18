@@ -6,9 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emplemetasi 1</title>
+    <style>
+        .bc {
+            background-color: blueviolet;
+        }
+    </style>
 </head>
 
 <body>
+    <h1>PENGULANGAN</h1>
     <h3>Cara Manual</h3>
     <table border="1" cellpadding='10' cellspacing='0'>
         <tr>
@@ -57,6 +63,43 @@
         </tr>
         <?php } ?>
     </table>
+
+    <!-- cara penulisan lanjutan -->
+    <table border="1" cellpadding='10' cellspacing='0'>
+        <?php for ($i = 1; $i <= 3; $i++): ?>
+        <tr>
+            <?php for ($j = 1; $j <= 3; $j++): ?>
+            <td>
+                <?php echo "$i , $j" ?>
+            </td>
+            <?php endfor; ?>
+        </tr>
+        <?php endfor; ?>
+    </table>
+    <hr>
+    <hr>
+    <hr>
+
+    <h1>PENGONDISIAN</h1>
+    <table border="1" cellpadding='10' cellspacing='0'>
+        <?php for ($i = 1; $i <= 5; $i++): ?>
+        <?php if ($i % 2 == 1): ?>
+        <tr class="bc">
+            <?php else: ?>
+        <tr>
+            <?php endif; ?>
+            <?php for ($j = 1; $j <= 3; $j++): ?>
+            <td>
+                <?php echo "$i , $j" ?>
+            </td>
+            <?php endfor; ?>
+        </tr>
+        <?php endfor; ?>
+    </table>
+    <hr>
+    <hr>
+    <hr>
+
 </body>
 
 </html>
